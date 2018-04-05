@@ -2,6 +2,8 @@
 
 This is a collection of quick-and-dirty scripts to test the performance of some IPFS gateways.
 
+The list of gateways was obtained from [here](https://ipfs.io/ipfs/QmR4P4szLnHfyQic7B19kGTjKYY1jnkb5U4YxTijNmPPAY/).
+
 ## Simple cURL GET
 
 ```
