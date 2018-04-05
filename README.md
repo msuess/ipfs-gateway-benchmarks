@@ -4,6 +4,10 @@ This is a collection of quick-and-dirty scripts to test the performance of some 
 
 The list of gateways was obtained from [here](https://ipfs.io/ipfs/QmR4P4szLnHfyQic7B19kGTjKYY1jnkb5U4YxTijNmPPAY/).
 
+## TL;DR
+
+Use [Infura](https://infura.io/).
+
 ## Simple cURL GET
 
 ```
@@ -82,7 +86,7 @@ xmine128.tk
          time_total:  34.105924
 ```
 
-## Vegeta attack
+## Vegeta Attack
 
 *HANDLE WITH CARE*
 
@@ -94,4 +98,69 @@ Please refer to the [Vegeta installation instructions](https://github.com/tsenar
 
 This will save the results to `*.bin` files and generate html reports.
 
+## Sample Results
+
 Feel free to check out my sample results but keep in mind that I executed the benchmarks with a dodgy internet connection, so you should probably try running them yourself.
+
+### gatewayipfsio
+```
+Bucket           #    %       Histogram
+[0s,     100ms]  0    0.00%   
+[100ms,  200ms]  0    0.00%   
+[200ms,  300ms]  14   5.60%   ####
+[300ms,  +Inf]   236  94.40%  ######################################################################
+```
+
+### hardbin
+```
+Bucket           #    %       Histogram
+[0s,     100ms]  0    0.00%   
+[100ms,  200ms]  9    3.60%   ##
+[200ms,  300ms]  55   22.00%  ################
+[300ms,  +Inf]   186  74.40%  #######################################################
+```
+
+### infura
+```
+Bucket           #    %       Histogram
+[0s,     100ms]  21   8.40%   ######
+[100ms,  200ms]  144  57.60%  ###########################################
+[200ms,  300ms]  19   7.60%   #####
+[300ms,  +Inf]   66   26.40%  ###################
+```
+
+### ipfsio
+```
+Bucket           #    %        Histogram
+[0s,     100ms]  0    0.00%    
+[100ms,  200ms]  0    0.00%    
+[200ms,  300ms]  0    0.00%    
+[300ms,  +Inf]   250  100.00%  ###########################################################################
+```
+
+### jesxxx
+```
+Bucket           #    %       Histogram
+[0s,     100ms]  0    0.00%   
+[100ms,  200ms]  2    0.80%   
+[200ms,  300ms]  62   24.80%  ##################
+[300ms,  +Inf]   186  74.40%  #######################################################
+```
+
+### siderus
+```
+Bucket           #    %        Histogram
+[0s,     100ms]  0    0.00%    
+[100ms,  200ms]  0    0.00%    
+[200ms,  300ms]  0    0.00%    
+[300ms,  +Inf]   250  100.00%  ###########################################################################
+```
+
+### xmine
+```
+Bucket           #    %        Histogram
+[0s,     100ms]  0    0.00%    
+[100ms,  200ms]  0    0.00%    
+[200ms,  300ms]  0    0.00%    
+[300ms,  +Inf]   250  100.00%  ###########################################################################
+```
